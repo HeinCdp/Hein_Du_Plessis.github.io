@@ -1,0 +1,4 @@
+// script.js
+
+document.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');

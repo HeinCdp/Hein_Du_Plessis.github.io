@@ -1,0 +1,212 @@
+/* styles.css */
+
+:sage-green {
+  #B9467;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2D3033;
+    color: #fff;
+    transition: background-color 0.5s ease;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding-top: 150px; /* Add this line */
+}
+
+
+nav {
+       background-color: #4D5157;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+nav:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+    color: var(--sage-green); /* Add sage green accent */
+
+}
+
+
+
+.section {
+    padding: 2em;
+    margin-bottom: 20px;
+    background-color: #4D5157;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+    border-color: var(--sage-green); /* Add sage green accent */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 5px solid #333;
+    transition: transform 0.5s ease;
+    border: 5px solid var(--sage-green); /* Add sage green accent */
+}
+
+.profile-image:hover {
+    transform: rotate(360deg);
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #555;
+    border: 1px solid #666;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project:hover {
+    background-color: #666;
+    transform: translateY(-5px);
+    border-color: var(--sage-green); /* Add sage green accent */
+}
+
+#download-cv {
+    background-color: #918E85;
+    color: #fff;
+    padding: 10px 20px ; /* Add side padding here */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+    transform: translateX(-50px);
+}
+
+#download-cv:hover {
+    background-color: #000000;
+}
+
+/* Scroll Effects */
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.scroll-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-frame {
+    background-color: #4D5157;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-frame {
+    background-color: #4D5157;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.skills-frame ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-frame ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-frame li {
+    margin-bottom: 10px;
+}
+
+.contact-frame li {
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    .section {
+        padding: 1em;
+    }
+    .profile-container {
+        margin-bottom: 10px;
+    }
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    .project {
+        padding: 10px;
+    }
+}
