@@ -1,40 +1,72 @@
 /* styles.css */
-
+:root {
+ 
+    --profile-theme: #545454;
+    --timeline-circle-theme: #14253e;
+    --good-circle-theme: #f8f8f8;
+    --bad-circle-theme: #545454;
+    --MATH-PI: 3.1415px;
+    --percent: 100;
+}
 :sage-green {
   #B9467;
 }
 
 body {
-   font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+   font-family: 'proxima-nova', sans-serif;
+    margin: 0px;
+    padding: 0px;
     background-color: #2D3033;
     color: #fff;
     transition: background-color 0.5s ease;
     scroll-behavior: smooth;
     overflow-x: hidden;
     padding-top: 150px; /* Add this line */
+    padding-bottom: 0px;
+    background-image: url('1474639.jpg');
+            background-size:cover;
+            background-position: center;
+            background-attachment: fixed;
+    width:100%;
+    min-width: 1000px;
+    height:auto;
+}
+.formatted-h1 {
+  font-family: 'serif', cormorantgaramond;
+  font-weight: lighter;
+}
+.footer {
+  background-color: var(--primary-color); 
+  color: var(--white); 
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-
 nav {
-       background-color: #4D5157;
+       background-color: #2d3033;
+       opacity: 0.955;
     color: #fff;
     padding: 1em;
     text-align: center;
     border-bottom: 1px solid #555;
     transition: background-color 0.5s ease, transform 0.5s ease;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   padding-left: -30px;
     flex-direction: row;
 }
+
+
 
 nav ul {
     list-style: none;
@@ -46,7 +78,9 @@ nav ul {
 
 nav li {
     margin-right: 20px;
+  
 }
+
 
 nav a {
     color: #fff;
@@ -59,7 +93,7 @@ nav a:hover {
 }
 
 nav:hover {
-    background-color: #555;
+    
     transform: translateY(-5px);
     color: var(--sage-green); /* Add sage green accent */
 
@@ -70,48 +104,81 @@ nav:hover {
 .section {
     padding: 2em;
     margin-bottom: 20px;
-    background-color: #4D5157;
-    border: 1px solid #555;
+    background-color: #2D3033;
+    opacity: 0.3;
+    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.5s ease, transform 0.5s ease;
-    border-radius: 10px;
-    width: 80%;
+    
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
-
+.sectionskills {
+    padding: 2em;
+    margin-bottom: 20px;
+    background-color: #2D3033;
+    opacity: 0.3;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section1 {
+    
+    margin-bottom: 140px;
+    display: flex; /* Use flexbox to layout the image and text */
+  flex-direction: row; /* Layout the image and text horizontally */
+  align-items: center; /* Vertically center the image and text */
+    
+    background-color: #2D3033;
+    opacity: 0.9;
+     justify-content:center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    height: 220px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .section:hover {
-    background-color: #555;
     transform: translateY(-5px);
     border-color: var(--sage-green); /* Add sage green accent */
+}
+
+.vl {
+  border-left: 3px solid white;
+  height: 50px;
+  padding-left: -10px;
 }
 
 .profile-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 20px;
+    margin-top: 200px;
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: 5px solid #333;
+
     transition: transform 0.5s ease;
-    border: 5px solid var(--sage-green); /* Add sage green accent */
+    padding-right: 100px;
+    
+    width: auto;/* Make the image wider than the section */
+    height: 300px;
+ 
 }
 
 .profile-image:hover {
-    transform: rotate(360deg);
 }
 
 .project {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #555;
+    background-color: #2D3033;
     border: 1px solid #666;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -119,16 +186,26 @@ nav:hover {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    display: flex; /* Use flexbox to layout the image and text */
+  flex-direction: row; /* Layout the image and text horizontally */
+  justify-content:space-evenly;
 }
 
 .project:hover {
-    background-color: #666;
+    background-color: #2D3033;
     transform: translateY(-5px);
-    border-color: var(--sage-green); /* Add sage green accent */
+    
 }
-
+.h2_format{
+    font-size: 30px;
+}
+.project_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 #download-cv {
-    background-color: #918E85;
+    background-color: #2D3033;
     color: #fff;
     padding: 10px 20px ; /* Add side padding here */
     border: none;
@@ -136,8 +213,10 @@ nav:hover {
     cursor: pointer;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
     transition: background-color 0.5s ease;
-    transform: translateX(-50px);
+    transform: translateX(10px);
 }
+
+
 
 #download-cv:hover {
     background-color: #000000;
@@ -150,25 +229,107 @@ nav:hover {
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
 }
+.sectionskills {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.pg-list, .tool-list, .favor-list {
+    padding: 0;
+    list-style: none;
+}
+.pg-list > li { 
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.sb-skeleton {
+    position: relative;
+    flex: 1 0 auto;
+    height: 2px;
+    background-color: var(--color-gray-dark-3);
+}
+.pg-list > li > span {
+    flex: 0 0 100px;
+}
+.sb-skeleton > .skillbar {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: var(--pgbar-length);
+    height: 4px;
+    background-color: var(--profile-theme);
+}
+
+.tool-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.tool-list > li {
+    position: relative;
+    text-align: center;
+    flex: 0 0 25%;
+}
+.tool-list > li > svg {
+    position: relative;
+    fill: transparent;
+    width: 95%;
+    transform: rotate(-90deg);
+}
+.tool-list > li > svg > circle {
+    stroke-width: 1px;
+    stroke: #cdcdcd;
+}
+.tool-list > li > svg > circle.cbar {
+    stroke-width: 3px;
+    stroke: var(--profile-theme);
+    stroke-linecap: round;
+    stroke-dashoffset: 0;
+    stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
+    transition: all 0.8s;
+    transition-timing-function: cubic-bezier(.64,.51,.16,.86);
+}
+.tool-list > li:hover > svg > circle.cbar {
+    stroke-width: 4px;
+    stroke: var(--good-circle-theme);
+    stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
+}
+
+
+.tool-list > li > .tl-name,
+.tool-list > li > .tl-exp {
+    position: absolute;
+    left: 50%;
+    color: var(--color-gray-dark-1);
+}
+.tool-list > li > .tl-name {
+    top: 50%;
+    font-size: 1.2rem;
+    padding-bottom: 10%;
+    transform: translate(-50%, -50%);
+}
+.tool-list > li > .tl-exp { 
+    top: calc(50% + 1.4rem);
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+}
+
 
 .section.scroll-reveal {
-    opacity: 1;
+    opacity: 0.8;
     transform: translateY(0);
+
 }
 
-.skills-frame {
-    background-color: #4D5157;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #555;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
 
 .contact-frame {
-    background-color: #4D5157;
+    background-color: #2D3033;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #555;
+    border: 1px  #555;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -209,4 +370,27 @@ nav:hover {
     .project {
         padding: 10px;
     }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+    .tool-list {
+        flex-wrap: wrap;
+    }
+    .tool-list > li {
+        flex: 0 0 33.33%;
+    }
+    .favor-list > li {
+        flex: 0 0 33.3333%;
+    }
+}
+
+@keyframes circle {
+  0% {
+    box-shadow: 0 0 0 0px rgba(51, 52, 57, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 6px rgba(51, 52, 57, 0);
+  }
 }
