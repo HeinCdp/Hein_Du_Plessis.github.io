@@ -13,6 +13,7 @@
 }
 
 body {
+
    font-family: 'proxima-nova', sans-serif;
     margin: 0px;
     padding: 0px;
@@ -27,13 +28,12 @@ body {
             background-size:cover;
             background-position: center;
             background-attachment: fixed;
-    width:100%;
-    min-width: 1000px;
-    height:auto;
+    
 }
 .formatted-h1 {
   font-family: 'serif', cormorantgaramond;
   font-weight: lighter;
+  margin-right: 20px;
 }
 .footer {
   background-color: var(--primary-color); 
@@ -68,12 +68,12 @@ nav {
 
 
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+#nav-options {
     display: flex;
-    flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
@@ -98,6 +98,7 @@ nav:hover {
     color: var(--sage-green); /* Add sage green accent */
 
 }
+
 
 
 
@@ -156,7 +157,7 @@ nav:hover {
 
 .profile-container {
     display: flex;
-    flex-direction: column;
+   
     margin-bottom: 20px;
     margin-top: 200px;
 }
@@ -164,12 +165,19 @@ nav:hover {
 .profile-image {
     margin-bottom: 20px;
 
-    transition: transform 0.5s ease;
-    padding-right: 100px;
     
-    width: auto;/* Make the image wider than the section */
+    padding-right: 80px;
+    
+    width: 240px;/* Make the image wider than the section */
     height: 300px;
+    min-width: 100;
  
+}
+
+@media (max-width: 240px) {
+  #profilepic {
+    width: 50%; /* or any other width value */
+  }
 }
 
 .profile-image:hover {
@@ -216,7 +224,10 @@ nav:hover {
     transform: translateX(10px);
 }
 
-
+#profilepic {
+    transition: width 0.5s, height 0.5s;
+   
+}
 
 #download-cv:hover {
     background-color: #000000;
@@ -291,11 +302,7 @@ nav:hover {
     transition: all 0.8s;
     transition-timing-function: cubic-bezier(.64,.51,.16,.86);
 }
-.tool-list > li:hover > svg > circle.cbar {
-    stroke-width: 4px;
-    stroke: var(--good-circle-theme);
-    stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
-}
+
 
 
 .tool-list > li > .tl-name,
